@@ -11,6 +11,7 @@
   "dependencies": {
     "@chakra-ui/icons": "^1.1.7",
     "@chakra-ui/react": "^1.8.6",
+    "@emailjs/browser": "^3.4.0",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
     "add": "^2.0.6",
@@ -23,6 +24,8 @@
     "next": "12.1.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-icons": "^4.3.1",
+    "react-slick": "^0.28.1",
     "yarn": "^1.22.17"
   },
   "devDependencies": {
