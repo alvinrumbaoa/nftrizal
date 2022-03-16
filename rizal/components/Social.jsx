@@ -1,4 +1,4 @@
-import {Box, HStack, Image,  Link } from '@chakra-ui/react'
+import { HStack, Image,  Link } from '@chakra-ui/react'
 
 const Social = () => {
 

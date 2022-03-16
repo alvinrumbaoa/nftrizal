@@ -1,24 +1,20 @@
 import Head from 'next/head'
 import Card from '../components/Card'
-import { Flex, Button, Box, Text, Divider, Input,Image, Heading, Accordion,
+import { Flex, Button, Box, Text, ChakraProvider, Input,Image, Heading, Accordion,
   AccordionItem,
   AccordionButton,
   AccordionPanel,
   AccordionIcon} from '@chakra-ui/react'
 import Footer from '../components/Footer'
+import theme from '../components/theme.fonts'
+import '@fontsource/jura'
+import Countdown from 'react-countdown';
+
+
 export default function Home() {
 
-
-  const imageURL=["/","/images","/images/","/images/","/images/","/images"]
-
-
-
-
-
-
-
-
   return (
+    <ChakraProvider theme={theme}>
     <Flex d="flex"  justify="space-around" align="center" direction="column" w={'full'} h={'full'} bgGradient='linear(to-b, #000000, #9F3AC3)'> 
         <Head>
           <title>Welcome to NFT Rizal</title>
@@ -35,8 +31,11 @@ export default function Home() {
                 </Box>
                 <Box mt={-20} justify="center">
                         <Image src="/images/hero.png" alt="hero-image" boxSize="450px" />
-                        <Box border="2px"  h="100px" w="500px" borderRadius="20px "color="white" align="center" mt={-20} pos="absolute">
-                             <Text fontWeight="bold" color="white">Launch Giveaways!</Text>
+                        <Box border="2px"  h="100px" w="300px" borderRadius="20px "color="white" align="center" mt={-20} pos="absolute">
+                             <Text fontWeight="bold" fontSize="xl" color="white">Launch Giveaways!</Text>
+                             <Countdown date={Date.now() + 2500000000}>
+                                 <Button>Check out New Sale</Button>
+                            </Countdown>
                         </Box>
                 </Box>       
                
@@ -177,13 +176,14 @@ export default function Home() {
 
       <Flex d="flex"  m={4} p={5} borderRadius="20px"  direction="column">
         <Heading color="white">SUBSCRIBE FOR NEWS ABOUT NFT RIZAL</Heading>
-        <Input />
-        <Button mt={2}>Sign Me Up</Button>
+        <Input type="email" name="email" placeholder="email" />
+        <Button type="submit" mt={2}>Sign Me Up</Button>
       </Flex>
 
       <Footer/>
    
      </Flex>
+     </ChakraProvider>
   )
 }
 
