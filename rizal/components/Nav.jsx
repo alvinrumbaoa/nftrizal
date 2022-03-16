@@ -9,15 +9,16 @@ import {  useDisclosure, Fade, HStack, Flex,  Tooltip, Spacer, IconButton,
 	useColorModeValue,
 	Stack, useColorMode, Box, Image} from '@chakra-ui/react'
 import Link from 'next/link'
-import Metamask from './metamask'
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
+import { useWeb3 } from "@3rdweb/hooks" 
 
 const Nav = () => {
 	const logo = "<NFT RIZAL/>"
 	const { isOpen, onOpen, onClose } = useDisclosure();
+	const { connectWallet, address, error } = useWeb3();
 
 	return (
-		
+	
 		<Flex p={2} bgGradient='linear(to-l, #000000, #000000	)' justify="space-between">
 			<Flex >
 					<Tooltip label="Home" >
@@ -25,7 +26,7 @@ const Nav = () => {
 					</Tooltip>
 			</Flex>
 			
-		
+				{	error ? console.log(error) : null }
 			
 			
 			<Flex display="flex" direction="column">
@@ -50,7 +51,10 @@ const Nav = () => {
 						<Tooltip label="Community" > 
 							<Button m={3} s	ize="md" color="white"  bg="none" variant='solid'><Link href="/projects">Community</Link></Button>
 						</Tooltip>
-						<Button m={3} size="md" color="gray" >Connect to Wallet</Button>
+						{address?
+						<Button m={3} size="md" color="gray" onClick={()=>connectWallet("injected") }>{address}</Button> :
+						<Button m={3} size="md" color="gray" onClick={()=>connectWallet("injected") }>Connect to Wallet</Button>
+						}
 				</Stack>
 			</Box>
 			</Fade>
@@ -66,7 +70,11 @@ const Nav = () => {
 					<Tooltip label="Community" > 
 						<Button m={3} s	ize="md" color="white"  bg="none" variant='solid'><Link href="/projects">Community</Link></Button>
 					</Tooltip>
-					<Button m={3} size="md" color="GRAY.900" >Connect to Wallet</Button>
+					{
+						address ?
+						<Button m={3} size="md" color="gray">{ address }</Button> :
+						<Button m={3} size="md" color="gray" onClick={()=>connectWallet("injected") }>Connect to Wallet</Button>
+					}
 			</Flex>
 			
         </Flex>

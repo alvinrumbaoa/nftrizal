@@ -13,6 +13,7 @@ import Countdown from 'react-countdown';
 
 export default function Home() {
 
+
   return (
     <ChakraProvider theme={theme}>
     <Flex d="flex"  justify="space-around" align="center" direction="column" w={'full'} h={'full'} bgGradient='linear(to-b, #000000, #9F3AC3)'> 
@@ -24,12 +25,12 @@ export default function Home() {
         
         </Head> 
         <Flex d="flex"  justify="space-around" align="center" direction="row" w={'full'} h="35vh">     
-                <Box mt={-20} justify="center">
+                <Box mt={20} justify="center">
                           <Heading fontSize="6xl" mb={2} bgClip='text'  bgGradient= 'linear(to-l, yellow.900, purple.300)' >NFT Rizal</Heading>
                           <Text mb={2} w="400px"color="white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices velit nisi morbi facilisi duis varius.</Text>
                           <Button colorScheme="purple">Collect Now</Button>
                 </Box>
-                <Box mt={-20} justify="center">
+                <Box mt={20} justify="center">
                         <Image src="/images/hero.png" alt="hero-image" boxSize="450px" />
                         <Box border="2px"  h="100px" w="300px" borderRadius="20px "color="white" align="center" mt={-20} pos="absolute">
                              <Text fontWeight="bold" fontSize="xl" color="white">Launch Giveaways!</Text>
@@ -41,7 +42,7 @@ export default function Home() {
                
         </Flex>
         
-        <Heading mt={10} color="white">Featured Art Collections</Heading>
+        <Heading mt={40} color="white">Featured Art Collections</Heading>
         <Flex d="flex" m={4} justify="space-around" align="center" direction="row">
           
           <Card title="NFT Rizal #001" description="Akatsuki" imageUrl="/images/Akatsuki Rizal.png"/>
@@ -49,7 +50,7 @@ export default function Home() {
           <Card title="NFT Rizal #003" description="New Normal" imageUrl="/images/mask purple.png"/>
         </Flex>
 
-        <Flex d="flex" maxW="4xl" m={4}  justify="space-between"  direction="row">
+        <Flex d="flex" maxW="4xl" mt={40}   justify="space-between"  direction="row">
           <Box d="flex" justify="flex-start" mr={20}>
             <Image src="/images/whyrizal.png" alt="thug rizal"/>
           </Box>
@@ -71,7 +72,7 @@ export default function Home() {
           </Flex>
         </Flex>
         
-        <Flex d="flex" maxW="4xl" m={4} p={5} borderRadius="20px" justify="space-between"   
+        <Flex d="flex" maxW="4xl" mt={40}  p={5} borderRadius="20px" justify="space-between"   
           bgImage="url('/images/roadmapbg.png')"
           bgPosition="center"
            bgRepeat="no-repeat"direction="column">
