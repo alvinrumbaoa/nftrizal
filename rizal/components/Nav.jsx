@@ -9,20 +9,12 @@ import {  useDisclosure, Fade, HStack, Flex,  Tooltip, Spacer, IconButton,
 	useColorModeValue,
 	Stack, useColorMode, Box, Image} from '@chakra-ui/react'
 import Link from 'next/link'
-
+import Metamask from './metamask'
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
 const Nav = () => {
-	const textColor = useColorModeValue("gray.700", "white")
-	const formBackground = useColorModeValue("orange.200", "gray.700")
-	const formBackground2 = useColorModeValue("orange.100", "orange.200")
-	const {toggleColorMode} = useColorMode()
-  	const buttonLogo = useColorModeValue( "/images/Do not Disturb iOS.png","/images/Contrast.png")	
 	const logo = "<NFT RIZAL/>"
-
 	const { isOpen, onOpen, onClose } = useDisclosure();
-	
-
 
 	return (
 		
