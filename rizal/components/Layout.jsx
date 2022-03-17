@@ -9,6 +9,7 @@ const Layout = ({children}) => {
 		<Box>
 			<Nav/>
 				{children}
+				
 		</Box>
 	)
 }

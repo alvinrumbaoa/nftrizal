@@ -68,7 +68,7 @@ export default function Home() {
                   </Box>
                   
                </Flex>
-               <Button>Learn more about Rizal </Button>
+               <Button><Link href="/about">Learn more about Rizal </Link></Button>
           </Flex>
         </Flex>
         
@@ -103,7 +103,7 @@ export default function Home() {
             <Text mt={2} fontWeight="bold" align="center" color="white">@IAMACHIPMUNKS</Text>
             <Text mt={2} fontWeight="bold" align="center" color="white">Developer and Creator of NFT Rizal</Text>
         </Flex>
-        <Heading mt={2} color="white" justify="center">LOOKING FOR ANSWERS</Heading>
+        <Heading mt={2} color="white" justify="center">LOOKING FOR ANSWERS?</Heading>
         <Accordion>
               <AccordionItem>
                 <h2>
@@ -181,7 +181,7 @@ export default function Home() {
         <Button type="submit" mt={2}>Sign Me Up</Button>
       </Flex>
 
-      <Footer/>
+
    
      </Flex>
      </ChakraProvider>

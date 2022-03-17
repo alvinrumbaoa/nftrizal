@@ -10,7 +10,10 @@ const Card = (props) => {
 	return (
 	<Box p={2} m={2} maxW='ld' borderWidth='1px' borderRadius='lg'
 	boxShadow="2px 2px 5px black" overflow='hidden'>
-      <Image src={props.imageUrl} alt={props.imageAlt} h="250px" />
+    
+    <Image src={props.imageUrl} alt={props.imageAlt} h="250px" align="center" />
+  
+     
 
       <Box p='6'>
         <Box display='flex' alignItems='baseline'>
