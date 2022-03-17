@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Card from '../components/Card'
-import { Flex, Button, Box, Text, ChakraProvider, Input,Image, Heading, Accordion,
+import { Flex, Button, Box, Link, Text, ChakraProvider, Input,Image, Heading, Accordion,
   AccordionItem,
   AccordionButton,
   AccordionPanel,
@@ -27,8 +27,8 @@ export default function Home() {
         <Flex d="flex"  justify="space-around" align="center" direction="row" w={'full'} h="35vh">     
                 <Box mt={20} justify="center">
                           <Heading fontSize="6xl" mb={2} bgClip='text'  bgGradient= 'linear(to-l, yellow.900, purple.300)' >NFT Rizal</Heading>
-                          <Text mb={2} w="400px"color="white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices velit nisi morbi facilisi duis varius.</Text>
-                          <Button colorScheme="purple">Collect Now</Button>
+                          <Text mb={2} w="500px"color="white">NFT Rizal is a new collection of minted art in honor of the national hero of the Philippines, Jose Rizal.  </Text>
+                          <Button colorScheme="purple"><Link href="https://opensea.io/nftrizal">Collect Now</Link></Button>
                 </Box>
                 <Box mt={20} justify="center">
                         <Image src="/images/hero.png" alt="hero-image" boxSize="450px" />
@@ -45,9 +45,9 @@ export default function Home() {
         <Heading mt={40} color="white">Featured Art Collections</Heading>
         <Flex d="flex" m={4} justify="space-around" align="center" direction="row">
           
-          <Card title="NFT Rizal #001" description="Akatsuki" imageUrl="/images/Akatsuki Rizal.png"/>
-          <Card title="NFT Rizal #002" description="LA Rams 22 Champion" imageUrl="/images/LA RAMS RIZAL.png"/>
-          <Card title="NFT Rizal #003" description="New Normal" imageUrl="/images/mask purple.png"/>
+          <Card title="NFT Rizal #006" price="0.02" description="Akatsuki" imageUrl="/images/Akatsuki Rizal.png" link="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/49490063564165837410746899416964571604195468147687052563142053034387178520586"/>
+          <Card title="NFT Rizal #010" price="0.02" description="LA Rams 22 Champion" imageUrl="/images/LA RAMS RIZAL.png" link="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/49490063564165837410746899416964571604195468147687052563142053038785225031681"/>
+          <Card title="NFT Rizal #005" price="0.01" description="New Normal" imageUrl="/images/mask purple.png" link="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/49490063564165837410746899416964571604195468147687052563142053033287666892801"/>
         </Flex>
 
         <Flex d="flex" maxW="4xl" mt={40}   justify="space-between"  direction="row">

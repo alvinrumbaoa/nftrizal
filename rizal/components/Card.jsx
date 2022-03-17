@@ -36,9 +36,13 @@ const Card = (props) => {
         <Box>
           {/* {props.price} */}
 		  
-          <Box as='span' d="flex" justify='space-between' direction="row" color='purple.200' fontWeight='bold' fontSize='md'>
-		             0.01 ETH <Image src="/images/ethereum.png" alt="ethereum logo"/>
-                <Button color="gray.700"><Link href={props.link}>Buy Now</Link></Button>
+          <Box as='span' d="flex" justify='center' direction="row" color='purple.200' fontWeight='bold' fontSize='md'>
+            <Box d="flex" justify='space-evenly' direction="column">
+            <Text color="purple.300" fontSize="xl" alignItems="center">{props.price}</Text><Image src="/images/ethereum.png" alt="ethereum logo"/>
+           
+            </Box>
+            <Button ml={20} color="gray.700"><Link href={props.link}>Buy Now</Link></Button>
+           
           </Box>
           
         </Box>

@@ -1,13 +1,7 @@
 
 import {  useDisclosure, Fade, HStack, Flex,  Tooltip, Spacer, IconButton,
 	Button,
-	Menu,
-	MenuButton,
-	MenuList,
-	MenuItem,
-	MenuDivider,
-	useColorModeValue,
-	Stack, useColorMode, Box, Image} from '@chakra-ui/react'
+	Stack, Box} from '@chakra-ui/react'
 import Link from 'next/link'
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { useWeb3 } from "@3rdweb/hooks" 
@@ -52,8 +46,8 @@ const Nav = () => {
 							<Button m={3} s	ize="md" color="white"  bg="none" variant='solid'><Link href="/projects">Community</Link></Button>
 						</Tooltip>
 						{address?
-						<Button m={3} size="md" color="gray" onClick={()=>connectWallet("injected") }>{address}</Button> :
-						<Button m={3} size="md" color="gray" onClick={()=>connectWallet("injected") }>Connect to Wallet</Button>
+						<Button m={3} size="md" color="gray">{address}</Button> :
+						<Button m={3} size="md" color="black" onClick={()=>connectWallet("injected") }>Connect to Wallet</Button>
 						}
 				</Stack>
 			</Box>
@@ -70,11 +64,10 @@ const Nav = () => {
 					<Tooltip label="Community" > 
 						<Button m={3} s	ize="md" color="white"  bg="none" variant='solid'><Link href="/projects">Community</Link></Button>
 					</Tooltip>
-					{
-						address ?
-						<Button m={3} size="md" color="gray">{ address }</Button> :
-						<Button m={3} size="md" color="gray" onClick={()=>connectWallet("injected") }>Connect to Wallet</Button>
-					}
+					{address?
+						<Button m={3} size="md" color="gray">{address}</Button> :
+						<Button m={3} size="md" color="black" onClick={()=>connectWallet("injected") }>Connect to Wallet</Button>
+						}
 			</Flex>
 			
         </Flex>
