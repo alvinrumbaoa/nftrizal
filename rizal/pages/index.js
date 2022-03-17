@@ -182,7 +182,7 @@ export default function Home() {
       </Flex>
 
 
-      <Footer/>`1w`
+      <Footer/>
    
      </Flex>
   

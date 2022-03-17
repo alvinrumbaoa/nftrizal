@@ -1,14 +1,16 @@
 import React from "react"
-import {Box} from '@chakra-ui/react'
+import {Box ,ChakraProvider} from '@chakra-ui/react'
 import Nav from './Nav'
-import Footer from './Footer'
-
-
+import '@fontsource/jura'
+import theme from '../components/theme.fonts'
 const Layout = ({children}) => {
 	return (
 		<Box>
-			<Nav/>
-				{children}
+			 <ChakraProvider theme={theme}>
+				<Nav/>
+					{children}
+			 </ChakraProvider>
+			
 				
 		</Box>
 	)

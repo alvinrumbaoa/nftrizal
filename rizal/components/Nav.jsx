@@ -39,11 +39,11 @@ const Nav = () => {
 						<Tooltip label="Home" >
 							<Button m={3} size="md" color="white" bg="none" variant='solid'><Link href="/">Home</Link></Button>
 						</Tooltip>
-						<Tooltip label="Marketplace" >   
-							<Button m={3} size="md" color="white" bg="none" variant='solid'><Link href="/about">Marketplace</Link></Button>	
+						<Tooltip label="Collections" >   
+							<Button m={3} size="md" color="white" bg="none" variant='solid'><Link href="/collections">Collections</Link></Button>	
 						</Tooltip>
 						<Tooltip label="Community" > 
-							<Button m={3} s	ize="md" color="white"  bg="none" variant='solid'><Link href="/projects">Community</Link></Button>
+							<Button m={3} s	ize="md" color="white"  bg="none" variant='solid'><Link href="/community">Community</Link></Button>
 						</Tooltip>
 						{address?
 						<Button m={3} size="md" color="gray">{address}</Button> :
@@ -58,11 +58,11 @@ const Nav = () => {
 					<Tooltip label="Home" >
 						<Button m={3} size="md" color="white"  bg="none" variant='solid'><Link href="/">Home</Link></Button>
 					</Tooltip>
-					<Tooltip label="Marketplace" >   
-						<Button m={3} size="md" color="white" bg="none" variant='solid'><Link href="/about">Marketplace</Link></Button>	
+					<Tooltip label="Collections" >   
+						<Button m={3} size="md" color="white" bg="none" variant='solid'><Link href="/collections">Collections</Link></Button>	
 					</Tooltip>
 					<Tooltip label="Community" > 
-						<Button m={3} s	ize="md" color="white"  bg="none" variant='solid'><Link href="/projects">Community</Link></Button>
+						<Button m={3} s	ize="md" color="white"  bg="none" variant='solid'><Link href="/community">Community</Link></Button>
 					</Tooltip>
 					{address?
 						<Button m={3} size="md" color="gray">{address}</Button> :
