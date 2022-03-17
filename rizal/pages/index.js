@@ -6,8 +6,8 @@ import { Flex, Button, Box, Link, Text, ChakraProvider, Input,Image, Heading, Ac
   AccordionPanel,
   AccordionIcon} from '@chakra-ui/react'
 import Footer from '../components/Footer'
-import theme from '../components/theme.fonts'
-import '@fontsource/jura'
+
+
 import Countdown from 'react-countdown';
 
 
@@ -15,7 +15,7 @@ export default function Home() {
 
 
   return (
-    <ChakraProvider theme={theme}>
+ 
     <Flex d="flex"  justify="space-around" align="center" direction="column" w={'full'} h={'full'} bgGradient='linear(to-b, #000000, #9F3AC3)'> 
         <Head>
           <title>Welcome to NFT Rizal</title>
@@ -45,9 +45,9 @@ export default function Home() {
         <Heading mt={40} color="white">Featured Art Collections</Heading>
         <Flex d="flex" m={4} justify="space-around" align="center" direction="row">
           
-          <Card title="NFT Rizal #006" price="0.02" description="Akatsuki" imageUrl="/images/Akatsuki Rizal.png" link="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/49490063564165837410746899416964571604195468147687052563142053034387178520586"/>
-          <Card title="NFT Rizal #010" price="0.02" description="LA Rams 22 Champion" imageUrl="/images/LA RAMS RIZAL.png" link="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/49490063564165837410746899416964571604195468147687052563142053038785225031681"/>
-          <Card title="NFT Rizal #005" price="0.01" description="New Normal" imageUrl="/images/mask purple.png" link="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/49490063564165837410746899416964571604195468147687052563142053033287666892801"/>
+          <Card title="NFT Rizal #006" price="0.02" description="Akatsuki" imageUrl="/images/006.png" link="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/49490063564165837410746899416964571604195468147687052563142053034387178520586"/>
+          <Card title="NFT Rizal #010" price="0.02" description="LA Rams 22 Champion" imageUrl="/images/010.png" link="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/49490063564165837410746899416964571604195468147687052563142053038785225031681"/>
+          <Card title="NFT Rizal #005" price="0.01" description="New Normal" imageUrl="/images/005.png" link="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/49490063564165837410746899416964571604195468147687052563142053033287666892801"/>
         </Flex>
 
         <Flex d="flex" maxW="4xl" mt={40}   justify="space-between"  direction="row">
@@ -182,9 +182,10 @@ export default function Home() {
       </Flex>
 
 
+      <Footer/>`1w`
    
      </Flex>
-     </ChakraProvider>
+  
   )
 }
 
