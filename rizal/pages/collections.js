@@ -18,8 +18,8 @@ const about = () => {
    			<Flex d="flex" isLoading={<Spinner/>} justify="space-around" align="center" direction="column" w={'full'} h={'full'} bgGradient='linear(to-b, #000000, #9F3AC3)'> 
 				<Heading mt={2} color="white">NFT Rizal Collection</Heading>
 				<SimpleGrid data-aos="fade-up"  mt={5} columns={[2, null, 3]} spacing='40px'>
-					<Card title="NFT Rizal #001" badge="SALE"price="0.01" description="Student of the Century" imageUrl="/images/001.png" openlink=""/>
-					<Card title="NFT Rizal #002" badge="SALE"price="0.02" description="#watermelon" imageUrl="/images/002.png" openlink=""/>
+					<Card title="NFT Rizal #001" badge="SALE"price="0.01" description="Student of the Century" imageUrl="/images/001.png" openlink="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/49490063564165837410746899416964571604195468147687052563142053027790108753921"/>
+					<Card title="NFT Rizal #002" badge="SALE"price="0.02" description="#watermelon" imageUrl="/images/002.png" openlink="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/49490063564165837410746899416964571604195468147687052563142053028889620381796"/>
 					<Card title="NFT Rizal #003" badge="SALE"price="0.01" description="Hero of the Nation" imageUrl="/images/003.png" openlink=""/>
 					<Card title="NFT Rizal #004" badge="SALE"price="0.02" description="PrayforUkraine" imageUrl="/images/004.png" openlink=""/>
 					<Card title="NFT Rizal #005" badge="SALE"price="0.02" description="New Normal" imageUrl="/images/005.png" openlink=""/>
