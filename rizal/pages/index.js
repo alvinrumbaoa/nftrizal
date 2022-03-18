@@ -1,17 +1,29 @@
+import React, { useState} from 'react'
 import Head from 'next/head'
 import Card from '../components/Card'
-import { Flex, Button, Box, Link, Text, ChakraProvider, Input,Image, Heading, Accordion,
+import { Flex, Button, Box, Link, Text,  Input,Image, Heading, Accordion,
   AccordionItem,
   AccordionButton,
   AccordionPanel,
   AccordionIcon} from '@chakra-ui/react'
 import Footer from '../components/Footer'
-
-
+import emailjs from '@emailjs/browser';
 import Countdown from 'react-countdown';
-
+import { useRouter } from 'next/router'
 
 export default function Home() {
+  const router = useRouter()
+
+  const [email, setEmail] = useState("");
+
+
+  emailjs.send("service_2bj6vaa","template_3zc94oi", email, 'k8qitowSIRDEqmYI1')
+	.then((response) => {
+	   console.log('SUCCESS!', response.status, response.text);
+     router.push("/thankyou")
+	}, (err) => {
+	   console.log('FAILED...', err);
+	});
 
 
   return (
@@ -24,16 +36,16 @@ export default function Home() {
   
         
         </Head> 
-        <Flex d="flex"  justify="space-around" align="center" direction="row" w={'full'} h="35vh">     
-                <Box mt={20} justify="center">
-                          <Heading fontSize="6xl" mb={2} bgClip='text'  bgGradient= 'linear(to-l, yellow.900, purple.300)' >NFT Rizal</Heading>
+        <Flex d="flex"  justify="space-around" align="center" direction={{sm:"column", lg:"row"}} w={'full'} h={'full'}>     
+                <Box data-aos="fade-down" mt={20} justify="center">
+                          <Heading fontSize="6xl" fontWeight="bold" mb={2} bgClip='text'  bgGradient= 'linear(to-l, yellow.700, purple.300)' textShadow="1px 1px 1px white" >NFT Rizal</Heading>
                           <Text mb={2} w="500px"color="white">NFT Rizal is a new collection of minted art in honor of the national hero of the Philippines, Jose Rizal.  </Text>
                           <Button colorScheme="purple"><Link href="https://opensea.io/nftrizal">Collect Now</Link></Button>
                 </Box>
-                <Box mt={20} justify="center">
+                <Box data-aos="fade-down"mt={20} justify="center">
                         <Image src="/images/hero.png" alt="hero-image" boxSize="450px" />
-                        <Box border="2px"  h="100px" w="300px" borderRadius="20px "color="white" align="center" mt={-20} pos="absolute">
-                             <Text fontWeight="bold" fontSize="xl" color="white">Launch Giveaways!</Text>
+                        <Box border="2px" fontWeight="bold" fontSize="xl" h="100px" w="300px" borderRadius="20px "color="white" align="center" mt={-20} pos="absolute">
+                             <Text fontWeight="bold" textShadow="2px 2px 2px white" color="purple.100">Launch Giveaways!</Text>
                              <Countdown date={Date.now() + 2500000000}>
                                  <Button>Check out New Sale</Button>
                             </Countdown>
@@ -43,36 +55,37 @@ export default function Home() {
         </Flex>
         
         <Heading mt={40} color="white">Featured Art Collections</Heading>
-        <Flex d="flex" m={4} justify="space-around" align="center" direction="row">
+        <Flex data-aos="fade-up" d="flex" m={4} justify="space-around" align="center" direction={{sm:"column", lg:"row"}}>
           
-          <Card title="NFT Rizal #006" price="0.02" description="Akatsuki" imageUrl="/images/006.png" link="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/49490063564165837410746899416964571604195468147687052563142053034387178520586"/>
-          <Card title="NFT Rizal #010" price="0.02" description="LA Rams 22 Champion" imageUrl="/images/010.png" link="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/49490063564165837410746899416964571604195468147687052563142053038785225031681"/>
-          <Card title="NFT Rizal #005" price="0.01" description="New Normal" imageUrl="/images/005.png" link="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/49490063564165837410746899416964571604195468147687052563142053033287666892801"/>
+          <Card  title="NFT Rizal #006" badge="SALE" price="0.02" description="Akatsuki" imageUrl="/images/006.png" link="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/49490063564165837410746899416964571604195468147687052563142053034387178520586"/>
+          <Card  title="NFT Rizal #010" badge="SALE" price="0.02" description="LA Rams 22 Champion" imageUrl="/images/010.png" link="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/49490063564165837410746899416964571604195468147687052563142053038785225031681"/>
+          <Card  title="NFT Rizal #005" badge="SALE" price="0.01" description="New Normal" imageUrl="/images/005.png" link="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/49490063564165837410746899416964571604195468147687052563142053033287666892801"/>
         </Flex>
 
-        <Flex d="flex" maxW="4xl" mt={40}   justify="space-between"  direction="row">
-          <Box d="flex" justify="flex-start" mr={20}>
-            <Image src="/images/whyrizal.png" alt="thug rizal"/>
-          </Box>
+        <Flex data-aos="zoom-in" d="flex" maxW="4xl" mt={40}   justify="space-between"  direction={{sm:"column", lg:"row"}}>
+          
+          <Image src="/images/whyrizal.png" borderRadius="20px" boxShadow="3px 2px 2px black"alt="thug rizal"/>
+         
           <Flex d="flex" m={4} justify="space-around" align="center" direction="column">
-            <Heading color="white"> Why NFT Rizal?</Heading>
-                <Flex d="flex" direction="row" justify="space-evenly" >
-                  <Box  m={2} border='2px' borderColor='white' boxSize="100px">
-                    <Text fontSize="xl" align="center" justify="center" color="white">500 Unique Art</Text>
+            <Heading color="white" fontWeight="bold"> Why NFT Rizal?</Heading>
+                <Flex mt={2} d="flex" direction="row" justify="space-evenly" >
+                  <Box p={5}  m={2} border='2px' borderColor='white' borderRadius="20px" boxSize="120px">
+                    <Text fontSize="xl" align="center" color="white">10,000 Rizal</Text>
                   </Box >
-                  <Box m={2}border='1px' borderColor='white' boxSize="100px">
-                    <Text  fontSize="xl" align="center" justify="center"color="white">100 Rare</Text>
+                  <Box p={5} m={2} border='2px' align="center" borderColor='white' borderRadius="20px" boxSize="120px">
+                    <Text  fontSize="xl" align="center" color="white">1000 Unique</Text>
                   </Box>
-                  <Box m={2}border='1px' borderColor='white' boxSize="100px">
-                    <Text  fontSize="xl" align="center" justify="center" color="white">100% History</Text>
+                  <Box p={5} m={2} border='2px'align="center" borderColor='white' borderRadius="20px"  boxSize="120px">
+                    <Text  fontSize="xl" align="center"   color="white">100% History</Text>
                   </Box>
                   
                </Flex>
-               <Button><Link href="/about">Learn more about Rizal </Link></Button>
+             
+               <Button mt={10}><Link href="/about">Learn more about Rizal </Link></Button>
           </Flex>
         </Flex>
         
-        <Flex d="flex" maxW="4xl" mt={40}  p={5} borderRadius="20px" justify="space-between"   
+        <Flex data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" d="flex" maxW="4xl" mt={40}  p={5} borderRadius="20px" justify="space-between"   
           bgImage="url('/images/roadmapbg.png')"
           bgPosition="center"
            bgRepeat="no-repeat"direction="column">
@@ -97,88 +110,88 @@ export default function Home() {
             </Box>
         </Flex>
 
-        <Flex d="flex" maxW="4xl" m={4} p={5} borderRadius="20px" justify="space-between" direction="column">
+        <Flex data-aos="zoom-in" duration="3000" d="flex" maxW="4xl" m={4} p={5} borderRadius="20px" justify="space-between" direction="column">
             <Heading mt={2} color="white">Meet the Founder</Heading>
             <Image mt={2} src="/images/Rectangle 119.png"></Image>
             <Text mt={2} fontWeight="bold" align="center" color="white">@IAMACHIPMUNKS</Text>
             <Text mt={2} fontWeight="bold" align="center" color="white">Developer and Creator of NFT Rizal</Text>
         </Flex>
-        <Heading mt={2} color="white" justify="center">LOOKING FOR ANSWERS?</Heading>
-        <Accordion>
+        <Heading data-aos="fade-down"mt={2} color="white" justify="center">LOOKING FOR ANSWERS?</Heading>
+        <Accordion mt={5} data-aos="fade-up" width="600px">
               <AccordionItem>
                 <h2>
                   <AccordionButton _expanded={{ bg: 'purple.700', color: 'white' }}>
-                    <Box flex='1' textAlign='left' >
-                         When it will be launch?
+                    <Box flex='1' color="white" textAlign='left' >
+                    <Text color="white" fontWeight="semibold" align="center"> When it will be launch?</Text>
                     </Box>
                     <AccordionIcon />
                   </AccordionButton>
                 </h2>
                 <AccordionPanel pb={4}>
-                      April 2 2022 12:00 PST
+                <Text color="white" fontWeight="semibold" align="center">April 2 2022 12:00 PST</Text>
                 </AccordionPanel>
               </AccordionItem>
 
               <AccordionItem>
                 <h2>
                   <AccordionButton _expanded={{ bg: 'purple.700', color: 'white' }}>
-                    <Box flex='1' textAlign='left'>
-                    What is the mint price??
+                    <Box flex='1' color="white" textAlign='left'>
+                    <Text color="white" fontWeight="semibold" align="center">What is the mint price??</Text>
                     </Box>
                     <AccordionIcon />
                   </AccordionButton >
                 </h2>
                 <AccordionPanel pb={4}>
-                    Floor Price starting at 0.01 ETH
+                <Text color="white" fontWeight="semibold" align="center">Floor Price starting at 0.01 ETH</Text>
                 </AccordionPanel>
               </AccordionItem>
               <AccordionItem>
                 <h2>
                   <AccordionButton _expanded={{ bg: 'purple.700', color: 'white' }}>
-                    <Box flex='1' textAlign='left'>
-                       How many can I buy?
+                    <Box flex='1' color="white" textAlign='left'>
+                    <Text color="white" fontWeight="semibold" align="center">  How many can I buy? </Text>
                     </Box>
                     <AccordionIcon />
                   </AccordionButton>
                 </h2>
                 <AccordionPanel pb={4}>
-                      Available on OpenSea and Rarible you can  buy with your Wallet (Metamask, Coinbase)
+                <Text color="white" fontWeight="semibold" align="center">Available on OpenSea and Rarible you can  buy with your Wallet (Metamask, Coinbase)</Text>
                 </AccordionPanel>
               </AccordionItem>
               <AccordionItem>
                 <h2>
                   <AccordionButton _expanded={{ bg: 'purple.700', color: 'white' }}>
-                    <Box flex='1' textAlign='left'>
-                    Are there different types of rarity?
+                    <Box flex='1' color="white" textAlign='left'>
+                    <Text color="white" fontWeight="semibold" align="center">Are there different types of rarity?</Text>
                     </Box>
                     <AccordionIcon />
                   </AccordionButton>
                 </h2>
                 <AccordionPanel pb={4}>
-                    Over 100+ Different Rarity
+                <Text color="white" fontWeight="semibold" align="center"> Over 100+ Different Rarity</Text>
                 </AccordionPanel>
               </AccordionItem>
        
              <AccordionItem>
                 <h2>
                   <AccordionButton _expanded={{ bg: 'purple.700', color: 'white' }}>
-                    <Box flex='1' textAlign='left'>
-                    On which blockchain wil the NFTs be?
+                    <Box flex='1' color="white" textAlign='left'>
+                    <Text color="white" fontWeight="semibold" align="center">On which blockchain wil the NFTs be?</Text>
                     </Box>
                     <AccordionIcon />
                   </AccordionButton>
                 </h2>
                 <AccordionPanel pb={4}>
-                    Polygon Matic
+                <Text color="white" fontWeight="semibold" align="center">Polygon Matic</Text>
                 </AccordionPanel>
               </AccordionItem>
          
               </Accordion>  
 
-      <Flex d="flex"  m={4} p={5} borderRadius="20px"  direction="column">
+      <Flex data-aos="zoom-out"  d="flex"  m={4} p={5} borderRadius="20px"  direction="column">
         <Heading color="white">SUBSCRIBE FOR NEWS ABOUT NFT RIZAL</Heading>
         <Input type="email" name="email" placeholder="email" />
-        <Button type="submit" mt={2}>Sign Me Up</Button>
+        <Button type="submit" value={email} onSubmit={(e)=> setEmail(e.target.value)} mt={2}>Sign Me Up</Button>
       </Flex>
 
 
