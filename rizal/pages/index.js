@@ -81,7 +81,7 @@ export default function Home() {
                   
                </Flex>
              
-               <Button mt={10}><Link href="https://en.wikipedia.org/wiki/Jos%C3%A9_Rizal">Learn more about Rizal </Link></Button>
+               <Button mt={10} colorScheme="purple.800" solid=""><Link href="https://en.wikipedia.org/wiki/Jos%C3%A9_Rizal">Learn more about Rizal </Link></Button>
           </Flex>
         </Flex>
         
