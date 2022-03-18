@@ -7,7 +7,7 @@ import { Flex, Button, Box, Link, Text,  Input,Image, Heading, Accordion,
   AccordionPanel,
   AccordionIcon} from '@chakra-ui/react'
 import Footer from '../components/Footer'
-import emailjs from '@emailjs/browser';
+// import emailjs from '@emailjs/browser';
 import Countdown from 'react-countdown';
 import { useRouter } from 'next/router'
 
@@ -17,13 +17,13 @@ export default function Home() {
   const [email, setEmail] = useState("");
 
 
-  emailjs.send("service_2bj6vaa","template_3zc94oi", email, 'k8qitowSIRDEqmYI1')
-	.then((response) => {
-	   console.log('SUCCESS!', response.status, response.text);
-     router.push("/thankyou")
-	}, (err) => {
-	   console.log('FAILED...', err);
-	});
+  // emailjs.send("service_2bj6vaa","template_3zc94oi", email, 'k8qitowSIRDEqmYI1')
+	// .then((response) => {
+	//    console.log('SUCCESS!', response.status, response.text);
+  //    router.push("/thankyou")
+	// }, (err) => {
+	//    console.log('FAILED...', err);
+	// });
 
 
   return (
