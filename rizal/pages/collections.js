@@ -15,7 +15,7 @@ const about = () => {
 
 	return (
 
-   			<Flex d="flex" isLoading={<Spinner/>} justify="space-around" align="center" direction="column" w={'full'} h={'full'} bgGradient='linear(to-b, #000000, #9F3AC3)'> 
+   			<Flex d="flex" isLoading justify="space-around" align="center" direction="column" w={'full'} h={'full'} bgGradient='linear(to-b, #000000, #9F3AC3)'> 
 				<Heading mt={2} color="white">NFT Rizal Collection</Heading>
 				<SimpleGrid data-aos="fade-up"  mt={5} columns={[2, null, 3]} spacing='40px'>
 					<Card title="NFT Rizal #001" badge="SALE"price="0.01" description="Student of the Century" imageUrl="/images/001.png" openlink="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/49490063564165837410746899416964571604195468147687052563142053027790108753921"/>
