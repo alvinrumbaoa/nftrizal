@@ -57,21 +57,21 @@ export default function Home() {
         </Head> 
         <Flex d="flex" justify="space-around" align="center" direction={{sm:"column",lg:"row"}}  w={{sm:"750px", md:"full"}}>     
                 <Box data-aos="fade-down" mt={20} justify="center">
-                          <Heading fontSize={{ base: '5xl', sm: '3xl', md: '6xl' }} fontWeight="bold" mb={2} bgClip='text'  bgGradient= 'linear(to-l, yellow.700, purple.300)'>NFT Rizal</Heading>
+                          <Heading fontSize={{ base: 'xl', sm: '3xl', md: '7xl' }} fontWeight="bold" mb={2} bgClip='text'  bgGradient= 'linear(to-l, yellow.700, purple.300)'>NFT Rizal</Heading>
                           <Text  mb={2} w={{sm:"200px", md: "400px"}} color="white">NFT Rizal is a new collection of minted art in honor of the national hero of the Philippines, Jose Rizal.  </Text>
                           <Button colorScheme="purple"><Link href="https://opensea.io/nftrizal">Collect Now</Link></Button>
                 </Box>
                 <Box data-aos="fade-down"mt={20} justify="center" >
                         <Image src="/images/hero.png" alt="hero-image" boxSize={{sm:"300px", md:"350px", lg: "400px"}} />
                         <Box border="2px" fontWeight="bold" fontSize="xl" h="100px" w="300px" borderRadius="20px "color="white" align="center" mt={-20} pos={{sm:'relative', lg:"absolute"}}>
-                             <Text fontWeight="bold" textShadow="2px 2px 2px white" color="purple.100">Launch Giveaways!</Text>
+                             <Text fontWeight="bold" textShadow="2px 2px 2px white" color="purple.100">Dropping NFT Art in:</Text>
                              {/* <Countdown date={Date.now() + 2500000000}>
                                  <Button>Check out New Sale</Button>
                             </Countdown> */}
                              <ul
                               id="countdown"
                               class="count-down"
-                              data-date="Apr 3, 2022 4:00:00 PM UTC"
+                              data-date="Apr 2, 2022 4:00:00 PM UTC"
                             >
                             <Text class="clock-item">
                               <span class="count-number days">20</span>D:
@@ -102,7 +102,7 @@ export default function Home() {
           <Image src="/images/whyrizal.png" borderRadius="20px" justify="center" w={{sm:"200px"}}boxShadow="3px 2px 2px black"alt="thug rizal"/>
          
           <Flex d="flex" m={4} justify="space-around" align="center" direction="column">
-            <Heading color="white"fontSize={{ base: 'xl', sm: '3xl', md: '6xl' }}  fontWeight="bold"> Why NFT Rizal?</Heading>
+            <Heading color="white"fontSize={{ base: 'xl', sm: '3xl', md: '4xl' }}  fontWeight="bold"> Why NFT Rizal?</Heading>
                 <Flex mt={2} d="flex" direction={{sm:"column", md:"row" }}justify="space-evenly" >
                   <Box p={5}  m={2} border='2px' borderColor='white' borderRadius="20px" boxSize="120px">
                     <Text fontSize="xl" align="center" color="white">10,000 Rizal</Text>
@@ -120,38 +120,38 @@ export default function Home() {
           </Flex>
         </Flex>
         
-        <Flex data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" d="flex" p={5} borderRadius="20px" justify="space-between"   
+        <Flex data-aos-anchor-placement="bottom-bottom" d="flex"mt={10} p={5} borderRadius="20px" justify="space-between"   
           bgImage="url('/images/roadmapbg.png')"
           bgPosition="center"
            bgRepeat="no-repeat"direction="column">
             
-            <Heading align="center" fontSize={{ base: 'xl', sm: '3xl', md: '6xl' }} justify="center" color="white">NFT Rizal Roadmap</Heading>
+            <Heading align="center" fontSize={{ base: 'xl', sm: '3xl', md: '4xl' }}justify="center" color="white">NFT Rizal Roadmap</Heading>
 
-            <Box mt={2} d="flex" direction="row" alignItems="center">
+            <Box mt={2}data-aos="fade-left"  d="flex" direction="row" alignItems="center">
               <Image src="/images/jeep.png" boxSize={{sm:"100px"}}></Image>
               <Text fontWeight="bold" ml={7} color="white">Project Launch Date: April 2 2022. Will mint and list 500 collection and will have some few community followers giveaways in the first sales of NFT Rizal Art</Text>
             </Box>
-            <Box mt={2} d="flex" direction="row"  alignItems="center" >
+            <Box data-aos="fade-left"   mt={2} d="flex" direction="row"  alignItems="center" >
               <Image src="/images/jeep.png"boxSize={{sm:"100px"}}></Image>
               <Text fontWeight="bold" ml={7}  color="white">Will launch all novels as NFT to support Foundation and Community affiliated to Jose Rizal</Text>
             </Box>
-            <Box mt={2} d="flex" direction="row" alignItems="center">
+            <Box data-aos="fade-left" mt={2} d="flex" direction="row" alignItems="center">
               <Image src="/images/jeep.png" boxSize={{sm:"100px"}}></Image>
               <Text fontWeight="bold" ml={7}  color="white"> Support Local Community in the Phillippines. Every Rizal Owner will have exclusive access to our Discord VIP Server.</Text>
             </Box>
-            <Box mt={2} d="flex" direction="row" alignItems="center">
+            <Box data-aos="fade-left" mt={2} d="flex" direction="row" alignItems="center">
               <Image src="/images/jeep.png" boxSize={{sm:"100px"}}></Image>
               <Text fontWeight="bold"  ml={7} color="white"> collections will be given away and One will have a lucky winner to get a Rare NFT Rizal that will value</Text>
             </Box>
         </Flex>
 
         <Flex data-aos="zoom-in" duration="3000" d="flex" m={4} p={5} borderRadius="20px" justify="space-between" direction="column">
-            <Heading mt={2} fontSize={{ base: 'xl', sm: '3xl', md: '6xl' }} color="white">Meet the Founder</Heading>
+            <Heading mt={2} fontSize={{ base: 'xl', sm: '3xl', md: '4xl' }} color="white">Meet the Founder</Heading>
             <Image mt={2} src="/images/Rectangle 119.png"></Image>
             <Text mt={2} fontWeight="bold" align="center" color="white">@IAMACHIPMUNKS</Text>
             <Text mt={2} fontWeight="bold" align="center" color="white">Developer and Creator of NFT Rizal</Text>
         </Flex>
-        <Heading data-aos="fade-down"mt={2} fontSize={{ base: 'xl', sm: '3xl', md: '6xl' }} color="white" justify="center">LOOKING FOR ANSWERS?</Heading>
+        <Heading data-aos="fade-down"mt={2} fontSize={{ base: 'xl', sm: '3xl', md: '4xl' }} color="white" justify="center">LOOKING FOR ANSWERS?</Heading>
         <Accordion mt={5} data-aos="fade-up" width={{sm:"200px",lg:"600px"}}>
               <AccordionItem>
                 <h2>
@@ -224,7 +224,7 @@ export default function Home() {
               </Accordion>  
 
       <Flex data-aos="zoom-out"  d="flex"  m={4} p={5} borderRadius="20px"  direction="column">
-        <Heading color="white" align="center" fontSize={{ base: 'xl', sm: '3xl', md: '6xl' }}>SUBSCRIBE FOR NEWS ABOUT NFT RIZAL</Heading>
+        <Heading color="white" align="center" fontSize={{ base: 'xl', sm: '3xl', md: '4xl' }}>SUBSCRIBE FOR NEWS ABOUT NFT RIZAL</Heading>
         <Input type="email" name="email" placeholder="email" />
         <Button type="submit" value={email} onSubmit={(e)=> setEmail(e.target.value)} mt={2}>Sign Me Up</Button>
       </Flex>
