@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Card from '../components/Card'
-import { Flex, Heading, SimpleGrid, GridItem} from '@chakra-ui/react'
+import { Flex, Heading, SimpleGrid, Input, GridItem} from '@chakra-ui/react'
 import Footer from '../components/Footer'
 import theme from '../components/theme.fonts'
 import '@fontsource/jura'
@@ -17,7 +17,8 @@ const about = () => {
 
    			<Flex d="flex" isLoading justify="space-around" align="center" direction="column" w={'full'} h={'full'} bgGradient='linear(to-b, #000000, #9F3AC3)'> 
 				<Heading mt={2} color="white">NFT Rizal Collection</Heading>
-				<SimpleGrid data-aos="fade-up"  mt={5} columns={[2, null, 3]} spacing='40px'>
+				<Input w="200px" color="purple.100" type="text"></Input>
+				<SimpleGrid data-aos="fade-up"  mt={5} columns={[1, null, 3]} spacing='40px'>
 					<Card title="NFT Rizal #001" badge="SALE"price="0.01" description="Student of the Century" imageUrl="/images/001.png" openlink="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/49490063564165837410746899416964571604195468147687052563142053027790108753921"/>
 					<Card title="NFT Rizal #002" badge="SALE"price="0.02" description="#watermelon" imageUrl="/images/002.png" openlink="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/49490063564165837410746899416964571604195468147687052563142053028889620381796"/>
 					<Card title="NFT Rizal #003" badge="SALE"price="0.01" description="Hero of the Nation" imageUrl="/images/003.png" openlink="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/49490063564165837410746899416964571604195468147687052563142053027790108753921"/>

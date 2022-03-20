@@ -1,7 +1,7 @@
 import React, { useState} from 'react'
 import Head from 'next/head'
 import Card from '../components/Card'
-import { Flex, Button, Box, Link, Text,  Input,Image, Heading, Accordion,
+import { Flex, Button, SimpleGrid, Box, Link, Text,  Input,Image, Heading, Accordion,
   AccordionItem,
   AccordionButton,
   AccordionPanel,
@@ -55,11 +55,12 @@ export default function Home() {
         </Flex>
         
         <Heading mt={40} color="white">Featured Art Collections</Heading>
-        <Flex data-aos="fade-up" d="flex" m={4} justify="space-around" align="center" direction={{sm:"column", lg:"row"}}>
-          
+        <Flex data-aos="fade-up" d="flex" m={4} justify="space-around" align="center" direction={{xs:"column",sm:"column", lg:"row"}}>
+         <SimpleGrid data-aos="fade-up"  mt={5} columns={[1, null, 3]} spacing='40px'>
           <Card  title="NFT Rizal #006" badge="SALE" price="0.02" description="Akatsuki" imageUrl="/images/006.png" openlink="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/49490063564165837410746899416964571604195468147687052563142053034387178520586"/>
           <Card  title="NFT Rizal #010" badge="SALE" price="0.02" description="LA Rams 22 Champion" imageUrl="/images/010.png" openlink="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/49490063564165837410746899416964571604195468147687052563142053038785225031681"/>
           <Card  title="NFT Rizal #005" badge="SALE" price="0.01" description="New Normal" imageUrl="/images/005.png" openlink="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/49490063564165837410746899416964571604195468147687052563142053033287666892801"/>
+          </SimpleGrid>
         </Flex>
 
         <Flex data-aos="zoom-in" d="flex" maxW="4xl" mt={40}   justify="space-between"  direction={{sm:"column", lg:"row"}}>
