@@ -5,7 +5,7 @@ import { Flex, Button, UnorderedList,SimpleGrid, Box, Link, Text,  Input,Image, 
   AccordionItem,
   AccordionButton,
   AccordionPanel,
-  AccordionIcon} from '@chakra-ui/react'
+  AccordionIcon, useToast} from '@chakra-ui/react'
 import Footer from '../components/Footer'
 // import emailjs from '@emailjs/browser';
 import Countdown from 'react-countdown';
@@ -44,7 +44,7 @@ export default function Home() {
               }
             }, 1000);
           },[])
-
+          const toast = useToast()
   return (
  
     <Flex d="flex"  justify="space-around" align="center" direction="column" bgGradient='linear(to-b, #000000, #9F3AC3)'> 
@@ -58,7 +58,7 @@ export default function Home() {
         <Flex d="flex" justify="space-around" align="center" direction={{sm:"column",lg:"row"}}  w={{sm:"750px", md:"full"}}>     
                 <Box data-aos="fade-down" mt={20} justify="center">
                           <Heading fontSize={{ base: 'xl', sm: '3xl', md: '7xl' }} fontWeight="bold" mb={2} bgClip='text'  bgGradient= 'linear(to-l, yellow.700, purple.300)'>NFT Rizal</Heading>
-                          <Text  mb={2} w={{sm:"200px", md: "400px"}} color="white">NFT Rizal is a new collection of minted art in honor of the national hero of the Philippines, Jose Rizal.  </Text>
+                          <Text  mb={2} w={{sm:"200px", md: "400px"}} fontWeight="bold" color="white">NFT Rizal is a new collection of minted art in honor of the national hero of the Philippines, Jose Rizal.  </Text>
                           <Button colorScheme="purple"><Link href="https://opensea.io/nftrizal">Collect Now</Link></Button>
                 </Box>
                 <Box data-aos="fade-down"mt={20} justify="center" >
@@ -226,7 +226,15 @@ export default function Home() {
       <Flex data-aos="zoom-out"  d="flex"  m={4} p={5} borderRadius="20px"  direction="column">
         <Heading color="white" align="center" fontSize={{ base: 'xl', sm: '3xl', md: '4xl' }}>SUBSCRIBE FOR NEWS ABOUT NFT RIZAL</Heading>
         <Input type="email" name="email" placeholder="email" />
-        <Button type="submit" value={email} onSubmit={(e)=> setEmail(e.target.value)} mt={2}>Sign Me Up</Button>
+        <Button type="submit" value={email}  onClick={() =>
+        toast({
+          title: 'Subscribed.',
+          description: "Thank you for joining.",
+          status: 'success',
+          duration: 9000,
+          isClosable: true,
+        })
+      } mt={2}>Sign Me Up</Button>
       </Flex>
 
 

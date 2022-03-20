@@ -11,7 +11,7 @@ const Card = (props) => {
 	<Box p={2} m={2} maxW='ld' borderWidth='1px' borderRadius='lg'
 	boxShadow="2px 2px 5px black" overflow='hidden'>
           <Box align="center" justify="center" >
-          <Image isLoading spinner={<Spinner/>}src={props.imageUrl} alt={props.imageAlt} h="300px" boxShadow="2px 2px 5px black"/>
+          <Image isLoaded={<Spinner/>} src={props.imageUrl} alt={props.imageAlt} h="300px" boxShadow="2px 2px 5px black"/>
   
           </Box>
     
