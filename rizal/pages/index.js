@@ -228,7 +228,7 @@ export default function Home() {
         <Input type="email" name="email" placeholder="email" />
         <Button type="submit" value={email}  onClick={() =>
         toast({
-          title: 'Subscribed.',
+          title: 'Emailed Subscribed.',
           description: "Thank you for joining.",
           status: 'success',
           duration: 9000,
