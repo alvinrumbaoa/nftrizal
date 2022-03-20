@@ -26,6 +26,7 @@
     "emailjs-com": "^3.2.0",
     "express": "^4.17.3",
     "framer-motion": "^6",
+    "jquery": "^3.6.0",
     "mongodb": "^4.4.1",
     "mongoose": "^6.2.5",
     "next": "12.1.0",

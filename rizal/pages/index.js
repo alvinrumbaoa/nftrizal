@@ -1,7 +1,7 @@
-import React, { useState} from 'react'
+import React, { useEffect, useState} from 'react'
 import Head from 'next/head'
 import Card from '../components/Card'
-import { Flex, Button, Container,SimpleGrid, Box, Link, Text,  Input,Image, Heading, Accordion,
+import { Flex, Button, UnorderedList,SimpleGrid, Box, Link, Text,  Input,Image, Heading, Accordion,
   AccordionItem,
   AccordionButton,
   AccordionPanel,
@@ -17,15 +17,33 @@ export default function Home() {
 
   const [email, setEmail] = useState("");
 
+//Countdown Timer
 
-  // emailjs.send("service_2bj6vaa","template_3zc94oi", email, 'k8qitowSIRDEqmYI1')
-	// .then((response) => {
-	//    console.log('SUCCESS!', response.status, response.text);
-  //    router.push("/thankyou")
-	// }, (err) => {
-	//    console.log('FAILED...', err);
-	// });
+          useEffect(() => {
+            const clockdiv = document.getElementById("countdown");
+            const countDownTime = new Date(
+              clockdiv.getAttribute("data-date")
+            ).getTime();
 
+            const countdownfunction = setInterval(function () {
+              const now = new Date().getTime();
+              const diff = countDownTime - now;
+              const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+              const hours = Math.floor(diff % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+              const minutes = Math.floor(diff % (1000 * 60 * 60) / (1000 * 60));
+              const seconds = Math.floor(diff % (1000 * 60) / 1000);
+
+              if (diff < 0) {
+                clockdiv.style.display = "none";
+                clearInterval(countdownfunction);
+              } else {
+                clockdiv.querySelector(".days").innerHTML = days;
+                clockdiv.querySelector(".hours").innerHTML = hours;
+                clockdiv.querySelector(".minutes").innerHTML = minutes;
+                clockdiv.querySelector(".seconds").innerHTML = seconds;
+              }
+            }, 1000);
+          },[])
 
   return (
  
@@ -47,9 +65,24 @@ export default function Home() {
                         <Image src="/images/hero.png" alt="hero-image" boxSize={{sm:"300px", md:"350px", lg: "400px"}} />
                         <Box border="2px" fontWeight="bold" fontSize="xl" h="100px" w="300px" borderRadius="20px "color="white" align="center" mt={-20} pos={{sm:'relative', lg:"absolute"}}>
                              <Text fontWeight="bold" textShadow="2px 2px 2px white" color="purple.100">Launch Giveaways!</Text>
-                             <Countdown date={Date.now() + 2500000000}>
+                             {/* <Countdown date={Date.now() + 2500000000}>
                                  <Button>Check out New Sale</Button>
-                            </Countdown>
+                            </Countdown> */}
+                             <ul
+                              id="countdown"
+                              class="count-down"
+                              data-date="Apr 3, 2022 4:00:00 PM UTC"
+                            >
+                            <Text class="clock-item">
+                              <span class="count-number days">20</span>D:
+                              <span class="count-number hours">20</span>H:
+                              <span class="count-number minutes">20</span>M:
+                              <span class="count-number seconds">20</span>S
+                            </Text>
+
+         
+                              </ul>
+       
                         </Box>
                 </Box>       
                
