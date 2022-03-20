@@ -7,14 +7,19 @@ import Aos from "aos";
 import "aos/dist/aos.css"
 
 
+
+
+  
 const Layout = ({children}) => {
+
+
 
 	useEffect(() =>{
 		Aos.init({duration: 1000})
 		},[]);
 
 	return (
-		<Box>
+		<Box w={'full'}>
 			 <ChakraProvider theme={theme}>
 				<Nav/>
 					{children}
