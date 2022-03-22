@@ -42,5 +42,8 @@
   "devDependencies": {
     "eslint": "8.10.0",
     "eslint-config-next": "12.1.0"
-  }
+  },
+  "description": "NFT Project for Rizal NFT",
+  "main": "index.js",
+  "license": "ISC"
 }
