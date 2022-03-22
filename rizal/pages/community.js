@@ -9,7 +9,7 @@ const community = () => {
 		<Image data-aos="zoom-out" src="/images/com.png" h="400px"/>
 		<Stack direction='row' spacing={4}>
 		<Button data-aos="fade-up" h="70px" w="200px" colorScheme='purple'size='lg' leftIcon={<FaDiscord />}>
-			<Link href="https://discord.gg/JRruvSKCkk">	Discord</Link>
+			<Link href="https://discord.gg/JRruvSKCkk">	Discord<Badge colorScheme="red">Soon</Badge></Link>
 		</Button>
 		<Button data-aos="fade-up"h="70px" w="200px"colorScheme='twitter' size='lg'leftIcon={<FaTwitter />}>
 			<Link href="https://twitter.com/nftrizal">	Twitter</Link>
