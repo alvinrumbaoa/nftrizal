@@ -4,6 +4,8 @@ Official NFT Rizal website created and design using NextJS, ChakraUI, EmailJS, R
 
 https://nftrizal-launching.vercel.app/
 
+Project Wireframe:
+
 ![NFT RIZAL LANDING WEBSITE](https://user-images.githubusercontent.com/79444246/159865558-b0efb495-80a8-4abe-90f9-76a6ae680b95.png)
 
 
