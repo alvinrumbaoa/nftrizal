@@ -6,7 +6,10 @@ https://nftrizal-launching.vercel.app/
 
 ![NFT RIZAL LANDING WEBSITE](https://user-images.githubusercontent.com/79444246/159865558-b0efb495-80a8-4abe-90f9-76a6ae680b95.png)
 
-Features: 
+
+##Features: </hr>
+
+
 -Designed the wireframe and Workflow using Figma for a faster and more efficient development process</hr>
 
 
