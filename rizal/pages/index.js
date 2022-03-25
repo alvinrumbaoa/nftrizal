@@ -1,7 +1,10 @@
-import React, { useEffect, useState} from 'react'
+import React, { useEffect,useRef,  useState} from 'react'
 import Head from 'next/head'
 import Card from '../components/Card'
-import { Flex, Button, UnorderedList,SimpleGrid, Box, Link, Text,  Input,Image, Heading, Accordion,
+import { Flex, Button, FormControl,
+  FormLabel,
+  FormErrorMessage,
+  FormHelperText,SimpleGrid, Box, Link, Text,  Input,Image, Heading, Accordion,
   AccordionItem,
   AccordionButton,
   AccordionPanel,
@@ -14,11 +17,20 @@ import { useRouter } from 'next/router'
 
 export default function Home() {
   const router = useRouter()
-
+  const form = useRef();
   const [email, setEmail] = useState("");
-
+  const [error, setError] = useState(false);
 //Countdown Timer
+          const sendEmail = (e) => {
+            e.preventDefault();
 
+            emailjs.sendForm('service_2bj6vaa', 'template_3zc94oi', form.current,'k8qitowSIRDEqmYI1')
+              .then((result) => {
+                  console.log(result.text);
+              }, (error) => {
+                  console.log(error.text);
+              });
+          };
           useEffect(() => {
             const clockdiv = document.getElementById("countdown");
             const countDownTime = new Date(
@@ -225,16 +237,16 @@ export default function Home() {
 
       <Flex data-aos="zoom-out"  d="flex"  m={4} p={5} borderRadius="20px"  direction="column">
         <Heading color="white" align="center" fontSize={{ base: 'xl', sm: '3xl', md: '4xl' }}>SUBSCRIBE FOR NEWS ABOUT NFT RIZAL</Heading>
-        <Input type="email" name="email" placeholder="email" />
-        <Button type="submit" value={email}  onClick={() =>
-        toast({
-          title: 'Emailed Subscribed.',
-          description: "Thank you for joining.",
-          status: 'success',
-          duration: 9000,
-          isClosable: true,
-        })
-      } mt={2}>Sign Me Up</Button>
+        <FormControl ref={form} onSubmit={sendEmail}>
+          <FormLabel htmlFor='email'>
+               <Input type="email" name="email" placeholder="email" />     
+               <Button type="submit" mt={2}>Sign Me Up</Button>
+          </FormLabel>
+                            
+
+        </FormControl>
+        
+        
       </Flex>
 
 
