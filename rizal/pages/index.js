@@ -24,7 +24,7 @@ export default function Home() {
           const sendEmail = (e) => {
             e.preventDefault();
 
-            emailjs.sendForm('service_2bj6vaa', 'template_3zc94oi', form.current,'k8qitowSIRDEqmYI1')
+            emailjs.sendForm('service_2bj6vaa', 'template_3zc94oi', form.current,'user_k8qitowSIRDEqmYI1')
               .then((result) => {
                   console.log(result.text);
               }, (error) => {
@@ -240,7 +240,14 @@ export default function Home() {
         <FormControl ref={form} onSubmit={sendEmail}>
           <FormLabel htmlFor='email'>
                <Input type="email" name="email" placeholder="email" />     
-               <Button type="submit" mt={2}>Sign Me Up</Button>
+               <Button type="submit"  onClick={() =>
+                  toast({
+                    title: 'Email Sent.',
+                    description: "Thank you for subscribing to NFT Rizal.",
+                    status: 'success',
+                    duration: 9000,
+                    isClosable: true,
+                  })}mt={2}>Sign Me Up</Button>
           </FormLabel>
                             
 
