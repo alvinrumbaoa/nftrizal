@@ -17,7 +17,7 @@ const about = () => {
 
 	const cards =[
 		{ 
-			title: "NFT Rizal #001",
+			title: "#001",
 			badge: "SALE",
 			price: "0.01",
 			description: "test 1",
@@ -26,7 +26,7 @@ const about = () => {
 			rarlink:"",
 		},
 		{ 
-			title: "NFT Rizal #002",
+			title: "#002",
 			badge: "SALE",
 			price: "0.01",
 			description: "",
@@ -35,7 +35,7 @@ const about = () => {
 			rarlink:"",
 		},
 		{ 
-			title: "NFT Rizal #003",
+			title: "#003",
 			badge: "SALE",
 			price: "0.01",
 			description: "",
@@ -44,7 +44,7 @@ const about = () => {
 			rarlink:"",
 		},
 		{ 
-			title: "NFT Rizal #004",
+			title: "#004",
 			badge: "SALE",
 			price: "0.01",
 			description: "",
@@ -53,7 +53,7 @@ const about = () => {
 			rarlink:"",
 		},
 		{ 
-			title: "NFT Rizal #005",
+			title: "#005",
 			badge: "SALE",
 			price: "0.01",
 			description: "",
@@ -62,7 +62,7 @@ const about = () => {
 			rarlink:"",
 		},
 		{ 
-			title: "NFT Rizal #006",
+			title: "#006",
 			badge: "SALE",
 			price: "0.01",
 			description: "",
@@ -71,7 +71,7 @@ const about = () => {
 			rarlink:"",
 		},
 		{ 
-			title: "NFT Rizal #007",
+			title: "#007",
 			badge: "SALE",
 			price: "0.01",
 			description: "",
@@ -80,7 +80,7 @@ const about = () => {
 			rarlink:"",
 		},
 		{ 
-			title: "NFT Rizal #008",
+			title: "#008",
 			badge: "SALE",
 			price: "0.01",
 			description: "",
@@ -89,7 +89,7 @@ const about = () => {
 			rarlink:"",
 		},
 		{ 
-			title: "NFT Rizal #009",
+			title: "#009",
 			badge: "SALE",
 			price: "0.01",
 			description: "",
@@ -98,7 +98,7 @@ const about = () => {
 			rarlink:"",
 		},
 		{ 
-			title: "NFT Rizal #010",
+			title: "#010",
 			badge: "SALE",
 			price: "0.01",
 			description: "",
@@ -107,7 +107,7 @@ const about = () => {
 			rarlink:"",
 		},
 		{ 
-			title: "NFT Rizal #011",
+			title: "#011",
 			badge: "SALE",
 			price: "0.01",
 			description: "",
@@ -116,7 +116,7 @@ const about = () => {
 			rarlink:"",
 		},
 		{ 
-			title: "NFT Rizal #012",
+			title: "#012",
 			badge: "SALE",
 			price: "0.01",
 			description: "",
@@ -125,7 +125,7 @@ const about = () => {
 			rarlink:"",
 		},
 		{ 
-			title: "NFT Rizal #013",
+			title: "#013",
 			badge: "SALE",
 			price: "0.01",
 			description: "",
@@ -134,7 +134,7 @@ const about = () => {
 			rarlink:"",
 		},
 		{ 
-			title: "NFT Rizal #014",
+			title: "#014",
 			badge: "SALE",
 			price: "0.01",
 			description: "",
@@ -143,7 +143,7 @@ const about = () => {
 			rarlink:"",
 		},
 		{ 
-			title: "NFT Rizal #015",
+			title: "#015",
 			badge: "SALE",
 			price: "0.01",
 			description: "",
@@ -152,7 +152,7 @@ const about = () => {
 			rarlink:"",
 		},
 		{ 
-			title: "NFT Rizal #016",
+			title: "#016",
 			badge: "SALE",
 			price: "0.01",
 			description: "",
@@ -161,7 +161,7 @@ const about = () => {
 			rarlink:"",
 		},
 		{ 
-			title: "NFT Rizal #017",
+			title: "#017",
 			badge: "SALE",
 			price: "0.01",
 			description: "",
@@ -170,7 +170,7 @@ const about = () => {
 			rarlink:"",
 		},
 		{ 
-			title: "NFT Rizal #018",
+			title: "#018",
 			badge: "SALE",
 			price: "0.01",
 			description: "",
@@ -179,7 +179,7 @@ const about = () => {
 			rarlink:"",
 		},
 		{ 
-			title: "NFT Rizal #019",
+			title: "#019",
 			badge: "SALE",
 			price: "0.01",
 			description: "",
@@ -188,7 +188,7 @@ const about = () => {
 			rarlink:"",
 		},
 		{ 
-			title: "NFT Rizal #020",
+			title: "#020",
 			badge: "SALE",
 			price: "0.01",
 			description: "",
@@ -197,7 +197,7 @@ const about = () => {
 			rarlink:"",
 		},
 		{ 
-			title: "NFT Rizal #021",
+			title: "#021",
 			badge: "SALE",
 			price: "0.01",
 			description: "",
@@ -206,7 +206,7 @@ const about = () => {
 			rarlink:"",
 		},
 		{ 
-			title: "NFT Rizal #022",
+			title: "#022",
 			badge: "SALE",
 			price: "0.01",
 			description: "",
@@ -224,8 +224,8 @@ const about = () => {
 	return (
 
    			<Flex d="flex" justify="space-around" align="center" direction="column" w={'full'} h={'full'} bgGradient='linear(to-b, #000000, #9F3AC3)'> 
-				<Heading mt={2} color="white">NFT Rizal Collection</Heading>
-				<Input w="200px" color="purple.100" type="text"  onChange={(e) => setSearch(e.target.value)}></Input>
+				<Heading mt={2} color="white">NFT Rizal Gallery</Heading>
+				<Input mt={2} w="500px" color="purple.100" type="text"  placeholder="Search by #" onChange={(e) => setSearch(e.target.value)}></Input>
 				<SimpleGrid data-aos="fade-up"  mt={5} columns={[1, null, 3]} spacing='40px'>
 					
 					{	
