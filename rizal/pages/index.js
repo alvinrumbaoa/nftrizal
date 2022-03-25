@@ -1,10 +1,7 @@
 import React, { useEffect,useRef,  useState} from 'react'
 import Head from 'next/head'
 import Card from '../components/Card'
-import { Flex, Button, FormControl,
-  FormLabel,
-  FormErrorMessage,
-  FormHelperText,SimpleGrid, Box, Link, Text,  Input,Image, Heading, Accordion,
+import { Flex, Button, SimpleGrid, Box, Link, Text,  Input,Image, Heading, Accordion,
   AccordionItem,
   AccordionButton,
   AccordionPanel,
@@ -83,7 +80,7 @@ export default function Home() {
                              <ul
                               id="countdown"
                               class="count-down"
-                              data-date="Apr 2, 2022 4:00:00 PM UTC"
+                              data-date="Apr 10, 2022 4:00:00 PM UTC"
                             >
                             <Text class="clock-item">
                               <span class="count-number days">20</span>D:
@@ -101,7 +98,7 @@ export default function Home() {
         </Flex>
         
         <Heading mt={40} color="white">Featured Art Collections</Heading>
-        <Flex data-aos="fade-up" d="flex" m={4} justify="space-around" align="center" direction={{xs:"column",sm:"column", lg:"row"}}>
+        <Flex data-aos="fade-up" d="flex" m={4} justify="space-around" align="center" direction={{sm:"column",md:"column", lg:"row"}}>
          <SimpleGrid data-aos="fade-up"  mt={5} columns={[1, null, 3]} spacing='40px'>
           <Card  title="NFT Rizal #006" badge="SALE" price="0.02" description="Akatsuki" imageUrl="/images/006.png" openlink="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/49490063564165837410746899416964571604195468147687052563142053034387178520586"/>
           <Card  title="NFT Rizal #010" badge="SALE" price="0.02" description="LA Rams 22 Champion" imageUrl="/images/010.png" openlink="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/49490063564165837410746899416964571604195468147687052563142053038785225031681"/>
@@ -109,12 +106,10 @@ export default function Home() {
           </SimpleGrid>
         </Flex>
 
-        <Flex data-aos="zoom-in" d="flex"  mt={40}   justify="space-between"  direction={{sm:"column", lg:"row"}}>
-          
-          <Image src="/images/whyrizal.png" borderRadius="20px" justify="center" w={{sm:"200px"}}boxShadow="3px 2px 2px black"alt="thug rizal"/>
-         
+        <Flex data-aos="zoom-in" d="flex"  mt={40}   justify={{sm:"center",md:"center", lg:"space-between"}} direction={{sm:"column", lg:"row"}}>
           <Flex d="flex" m={4} justify="space-around" align="center" direction="column">
-            <Heading color="white"fontSize={{ base: 'xl', sm: '3xl', md: '4xl' }}  fontWeight="bold"> Why NFT Rizal?</Heading>
+          <Image src="/images/whyrizal.png" borderRadius="20px" justify="center" w={{sm:"200px",md:"300px", lg:"400px"}}boxShadow="3px 2px 2px black"alt="thug rizal"/>
+            <Heading  mt={10} color="white"fontSize={{ base: 'xl', sm: '3xl', md: '4xl' }}  fontWeight="bold"> Why NFT Rizal?</Heading>
                 <Flex mt={2} d="flex" direction={{sm:"column", md:"row" }}justify="space-evenly" >
                   <Box p={5}  m={2} border='2px' borderColor='white' borderRadius="20px" boxSize="120px">
                     <Text fontSize="xl" align="center" color="white">10,000 Rizal</Text>
@@ -132,7 +127,7 @@ export default function Home() {
           </Flex>
         </Flex>
         
-        <Flex data-aos-anchor-placement="bottom-bottom" d="flex"mt={10} p={5} borderRadius="20px" justify="space-between"   
+        <Flex data-aos-anchor-placement="bottom-bottom" d="flex"mt={10} p={5} w="700px" objectFit="cover" justify="space-between"   
           bgImage="url('/images/roadmapbg.png')"
           bgPosition="center"
            bgRepeat="no-repeat"direction="column">
@@ -140,19 +135,19 @@ export default function Home() {
             <Heading align="center" fontSize={{ base: 'xl', sm: '3xl', md: '4xl' }}justify="center" color="white">NFT Rizal Roadmap</Heading>
 
             <Box mt={2}data-aos="fade-left"  d="flex" direction="row" alignItems="center">
-              <Image src="/images/jeep.png" boxSize={{sm:"100px"}}></Image>
-              <Text fontWeight="bold" ml={7} color="white">Project Launch Date: April 2 2022. Will mint and list 500 collection and will have some few community followers giveaways in the first sales of NFT Rizal Art</Text>
+              <Image src="/images/jeep.png" boxSize={{sm:"100px", md: "120px", lg:"130px"}}></Image>
+              <Text fontWeight="bold" fontSize="15px" ml={7} color="white">Project Launch Date: April 10 2022. Will mint and list 500 collection and will have some few community followers giveaways in the first sales of NFT Rizal Art</Text>
             </Box>
             <Box data-aos="fade-left"   mt={2} d="flex" direction="row"  alignItems="center" >
-              <Image src="/images/jeep.png"boxSize={{sm:"100px"}}></Image>
+              <Image src="/images/jeep.png"boxSize={{sm:"100px", md: "120px", lg:"130px"}}></Image>
               <Text fontWeight="bold" ml={7}  color="white">Will launch all novels as NFT to support Foundation and Community affiliated to Jose Rizal</Text>
             </Box>
             <Box data-aos="fade-left" mt={2} d="flex" direction="row" alignItems="center">
-              <Image src="/images/jeep.png" boxSize={{sm:"100px"}}></Image>
+              <Image src="/images/jeep.png" boxSize={{sm:"100px", md: "120px", lg:"130px"}}></Image>
               <Text fontWeight="bold" ml={7}  color="white"> Support Local Community in the Phillippines. Every Rizal Owner will have exclusive access to our Discord VIP Server.</Text>
             </Box>
             <Box data-aos="fade-left" mt={2} d="flex" direction="row" alignItems="center">
-              <Image src="/images/jeep.png" boxSize={{sm:"100px"}}></Image>
+              <Image src="/images/jeep.png" boxSize={{sm:"100px", md: "120px", lg:"130px"}}></Image>
               <Text fontWeight="bold"  ml={7} color="white"> collections will be given away and One will have a lucky winner to get a Rare NFT Rizal that will value</Text>
             </Box>
         </Flex>
@@ -175,7 +170,7 @@ export default function Home() {
                   </AccordionButton>
                 </h2>
                 <AccordionPanel pb={4}>
-                <Text color="white" fontWeight="semibold" align="center">April 2 2022 12:00 PST</Text>
+                <Text color="white" fontWeight="semibold" align="center">April 10 2022 12:00 PST</Text>
                 </AccordionPanel>
               </AccordionItem>
 
@@ -235,12 +230,11 @@ export default function Home() {
          
               </Accordion>  
 
-      <Flex data-aos="zoom-out"  d="flex"  m={4} p={5} borderRadius="20px"  direction="column">
-        <Heading color="white" align="center" fontSize={{ base: 'xl', sm: '3xl', md: '4xl' }}>SUBSCRIBE FOR NEWS ABOUT NFT RIZAL</Heading>
-        <FormControl ref={form} onSubmit={sendEmail}>
-          <FormLabel htmlFor='email'>
-               <Input type="email" name="email" placeholder="email" />     
-               <Button type="submit"  onClick={() =>
+      <Flex data-aos="zoom-out"  d="flex"  align="center" m={4} p={5} borderRadius="20px"  direction="column">
+        <Heading color="white" align="center"  justify="center" fontSize={{ base: 'xl', sm: '3xl', md: '3xl' }}>SUBSCRIBE FOR NEWS ABOUT NFT RIZAL</Heading>
+        <form ref={form} onSubmit={sendEmail}>
+               <Input color="white" w={'600px'} type="email" name="email" placeholder="email" />     
+               <Button m={2} p={6}justify="center" align="center" color="white"  type="submit"  onClick={() =>
                   toast({
                     title: 'Email Sent.',
                     description: "Thank you for subscribing to NFT Rizal.",
@@ -248,10 +242,7 @@ export default function Home() {
                     duration: 9000,
                     isClosable: true,
                   })}mt={2}>Sign Me Up</Button>
-          </FormLabel>
-                            
-
-        </FormControl>
+        </form>
         
         
       </Flex>
