@@ -7,7 +7,7 @@ import { Flex, Button, SimpleGrid, Box, Link, Text,  Input,Image, Heading, Accor
   AccordionPanel,
   AccordionIcon, useToast} from '@chakra-ui/react'
 import Footer from '../components/Footer'
-// import emailjs from '@emailjs/browser';
+import emailjs from '@emailjs/browser';
 import Countdown from 'react-countdown';
 import { useRouter } from 'next/router'
 
